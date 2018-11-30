@@ -33,12 +33,11 @@ def application do
 end
 ```
 
-## If you'd like to mount VerkWeb on another Endpoint:
+## Configure the path you'd like verk to be available at
 
 ```elixir
-defmodule MyApp.Endpoint do
-  use VerkWeb.Mount, path: "/verk"
-  ...
+defmodule MyApp.Router do
+  forward "/verk", VerkWeb.Endpoint
 end
 ```
 
